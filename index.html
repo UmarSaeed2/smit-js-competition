@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .expense-form, .expense-list {
+            margin-bottom: 20px;
+        }
+        .expense-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .expense-item button {
+            margin-left: 10px;
+        }
+        .total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="expense-form">
+            <input type="text" id="description" placeholder="Description" />
+            <input type="number" id="amount" placeholder="Amount" />
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div class="expense-list">
+            <ul id="expenseList"></ul>
+        </div>
+        <div class="total">Total: $<span id="total">0.00</span></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
